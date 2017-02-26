@@ -13,10 +13,16 @@ protocol FileUtilsProtocol {
 
 class FileUtils: NSObject, FileUtilsProtocol {
     
+    let mainBundle: Bundle
+    
+    init(mainBundle: Bundle) {
+        self.mainBundle = mainBundle
+    }
+    
     func readPersonsFile(success: @escaping (Data, FileUtilsError) -> Void) {
         DispatchQueue.global(qos: .background).async {
             
-            guard let filePath = Bundle.main.path(forResource: "teste99", ofType:"json") else {
+            guard let filePath = self.mainBundle.path(forResource: "teste99", ofType:"json") else {
                 print("File Not Found")
                 DispatchQueue.main.async {
                     success(Data(), .fileNotFound)
