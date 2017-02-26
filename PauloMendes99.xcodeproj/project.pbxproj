@@ -83,7 +83,7 @@
 		807FE8781E6345B700742D65 /* DatasourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatasourceTests.swift; sourceTree = "<group>"; };
 		807FE87B1E63514E00742D65 /* FileUtilsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUtilsTests.swift; sourceTree = "<group>"; };
 		80E337AA1E61D9A90000534E /* PauloMendes99.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PauloMendes99.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		80E337AD1E61D9A90000534E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		80E337AD1E61D9A90000534E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		80E337B21E61D9A90000534E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		80E337B41E61D9A90000534E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80E337B71E61D9A90000534E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -168,6 +168,7 @@
 		8029B9391E6223740022053B /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				80E337AD1E61D9A90000534E /* AppDelegate.swift */,
 				807FE86F1E633EC500742D65 /* Transformers */,
 				807FE86B1E63358900742D65 /* Containers */,
 				807FE8681E6332DF00742D65 /* Datasource */,
@@ -298,7 +299,6 @@
 			children = (
 				8029B9481E622FEA0022053B /* teste99.json */,
 				8029B9391E6223740022053B /* Source */,
-				80E337AD1E61D9A90000534E /* AppDelegate.swift */,
 				80E337B41E61D9A90000534E /* Assets.xcassets */,
 				80E337B91E61D9A90000534E /* Info.plist */,
 			);
@@ -308,10 +308,10 @@
 		80E337C11E61D9A90000534E /* PauloMendes99Tests */ = {
 			isa = PBXGroup;
 			children = (
-				807FE87A1E63514100742D65 /* Utils */,
 				807FE8771E6345A700742D65 /* Datasource */,
-				807FE8721E63404600742D65 /* Transformer */,
 				800AF2311E626D8E00592135 /* Models */,
+				807FE8721E63404600742D65 /* Transformer */,
+				807FE87A1E63514100742D65 /* Utils */,
 				800AF2321E626D8E00592135 /* ViewControllers */,
 				800AF2331E626D8E00592135 /* ViewModels */,
 				80E337C41E61D9A90000534E /* Info.plist */,

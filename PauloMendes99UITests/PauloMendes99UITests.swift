@@ -18,11 +18,7 @@ class PauloMendes99UITests: XCTestCase {
 
     }
     
-    override func tearDown() {
-        super.tearDown()
-    }
-    
-    func testExample() {
+    func testOpenAndSwipeTableView() {
         
         let app = XCUIApplication()
         XCTAssertEqual(app.tables.count, 1)

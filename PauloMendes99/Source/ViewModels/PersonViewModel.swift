@@ -3,13 +3,13 @@ import UIKit
 import Kingfisher
 
 class PersonViewModel: Hashable {
-    let avatarImage: URL?
-    let fullName: String?
-    let birthday: String?
-    let personId: String?
+    let avatarImage: URL
+    let fullName: String
+    let birthday: String
+    let personId: String
     
     var hashValue: Int {
-        return self.personId!.hash
+        return self.personId.hash
     }
     
     private static let formatter: DateFormatter = {
