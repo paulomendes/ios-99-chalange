@@ -27,6 +27,13 @@
 		8029B9491E622FEA0022053B /* teste99.json in Resources */ = {isa = PBXBuildFile; fileRef = 8029B9481E622FEA0022053B /* teste99.json */; };
 		8029B94B1E6236E50022053B /* PersonsCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8029B94A1E6236E50022053B /* PersonsCollection.swift */; };
 		8029B94D1E6246B50022053B /* PersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8029B94C1E6246B50022053B /* PersonViewModel.swift */; };
+		807FE86A1E6332F300742D65 /* PersonsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807FE8691E6332F300742D65 /* PersonsDataSource.swift */; };
+		807FE86E1E63359C00742D65 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807FE86D1E63359C00742D65 /* Container.swift */; };
+		807FE8711E633ED400742D65 /* PersonsTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807FE8701E633ED400742D65 /* PersonsTransformer.swift */; };
+		807FE8741E63405600742D65 /* PersonsTransformerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807FE8731E63405600742D65 /* PersonsTransformerTests.swift */; };
+		807FE8751E63405B00742D65 /* PersonsTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807FE8701E633ED400742D65 /* PersonsTransformer.swift */; };
+		807FE8761E6343D100742D65 /* PersonsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807FE8691E6332F300742D65 /* PersonsDataSource.swift */; };
+		807FE8791E6345B700742D65 /* DatasourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807FE8781E6345B700742D65 /* DatasourceTests.swift */; };
 		80E337AE1E61D9A90000534E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E337AD1E61D9A90000534E /* AppDelegate.swift */; };
 		80E337B31E61D9A90000534E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80E337B11E61D9A90000534E /* Main.storyboard */; };
 		80E337B51E61D9A90000534E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80E337B41E61D9A90000534E /* Assets.xcassets */; };
@@ -67,6 +74,11 @@
 		8029B9481E622FEA0022053B /* teste99.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = teste99.json; sourceTree = "<group>"; };
 		8029B94A1E6236E50022053B /* PersonsCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonsCollection.swift; sourceTree = "<group>"; };
 		8029B94C1E6246B50022053B /* PersonViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonViewModel.swift; sourceTree = "<group>"; };
+		807FE8691E6332F300742D65 /* PersonsDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonsDataSource.swift; sourceTree = "<group>"; };
+		807FE86D1E63359C00742D65 /* Container.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
+		807FE8701E633ED400742D65 /* PersonsTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonsTransformer.swift; sourceTree = "<group>"; };
+		807FE8731E63405600742D65 /* PersonsTransformerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonsTransformerTests.swift; sourceTree = "<group>"; };
+		807FE8781E6345B700742D65 /* DatasourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatasourceTests.swift; sourceTree = "<group>"; };
 		80E337AA1E61D9A90000534E /* PauloMendes99.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PauloMendes99.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80E337AD1E61D9A90000534E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80E337B21E61D9A90000534E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -153,6 +165,9 @@
 		8029B9391E6223740022053B /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				807FE86F1E633EC500742D65 /* Transformers */,
+				807FE86B1E63358900742D65 /* Containers */,
+				807FE8681E6332DF00742D65 /* Datasource */,
 				8029B93A1E6223740022053B /* Models */,
 				8029B93D1E6223A00022053B /* Storyboards */,
 				8029B93E1E6224050022053B /* Utils */,
@@ -205,6 +220,46 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		807FE8681E6332DF00742D65 /* Datasource */ = {
+			isa = PBXGroup;
+			children = (
+				807FE8691E6332F300742D65 /* PersonsDataSource.swift */,
+			);
+			path = Datasource;
+			sourceTree = "<group>";
+		};
+		807FE86B1E63358900742D65 /* Containers */ = {
+			isa = PBXGroup;
+			children = (
+				807FE86D1E63359C00742D65 /* Container.swift */,
+			);
+			path = Containers;
+			sourceTree = "<group>";
+		};
+		807FE86F1E633EC500742D65 /* Transformers */ = {
+			isa = PBXGroup;
+			children = (
+				807FE8701E633ED400742D65 /* PersonsTransformer.swift */,
+			);
+			path = Transformers;
+			sourceTree = "<group>";
+		};
+		807FE8721E63404600742D65 /* Transformer */ = {
+			isa = PBXGroup;
+			children = (
+				807FE8731E63405600742D65 /* PersonsTransformerTests.swift */,
+			);
+			path = Transformer;
+			sourceTree = "<group>";
+		};
+		807FE8771E6345A700742D65 /* Datasource */ = {
+			isa = PBXGroup;
+			children = (
+				807FE8781E6345B700742D65 /* DatasourceTests.swift */,
+			);
+			path = Datasource;
+			sourceTree = "<group>";
+		};
 		80E337A11E61D9A90000534E = {
 			isa = PBXGroup;
 			children = (
@@ -242,6 +297,8 @@
 		80E337C11E61D9A90000534E /* PauloMendes99Tests */ = {
 			isa = PBXGroup;
 			children = (
+				807FE8771E6345A700742D65 /* Datasource */,
+				807FE8721E63404600742D65 /* Transformer */,
 				800AF2311E626D8E00592135 /* Models */,
 				800AF2321E626D8E00592135 /* ViewControllers */,
 				800AF2331E626D8E00592135 /* ViewModels */,
@@ -517,11 +574,14 @@
 			files = (
 				8029B9421E62291C0022053B /* PersonsViewController.swift in Sources */,
 				8029B94B1E6236E50022053B /* PersonsCollection.swift in Sources */,
+				807FE8711E633ED400742D65 /* PersonsTransformer.swift in Sources */,
 				8029B9401E62245B0022053B /* Person.swift in Sources */,
 				80E337AE1E61D9A90000534E /* AppDelegate.swift in Sources */,
 				8029B9471E622F520022053B /* FileUtils.swift in Sources */,
 				800AF22F1E624DE800592135 /* PersonTableViewCell.swift in Sources */,
 				8029B94D1E6246B50022053B /* PersonViewModel.swift in Sources */,
+				807FE86E1E63359C00742D65 /* Container.swift in Sources */,
+				807FE86A1E6332F300742D65 /* PersonsDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,11 +593,15 @@
 				800AF2421E627D1300592135 /* PersonViewControllerTests.swift in Sources */,
 				800AF2351E626DB700592135 /* PersonCollectionTests.swift in Sources */,
 				800AF2431E627DE300592135 /* PersonsViewController.swift in Sources */,
+				807FE8741E63405600742D65 /* PersonsTransformerTests.swift in Sources */,
 				800AF2441E627DE600592135 /* PersonTableViewCell.swift in Sources */,
 				800AF23A1E62704400592135 /* PersonTests.swift in Sources */,
 				800AF2401E627CC000592135 /* FileUtils.swift in Sources */,
+				807FE8751E63405B00742D65 /* PersonsTransformer.swift in Sources */,
 				800AF23E1E62750D00592135 /* PersonViewModelTests.swift in Sources */,
+				807FE8791E6345B700742D65 /* DatasourceTests.swift in Sources */,
 				800AF23B1E62705700592135 /* Person.swift in Sources */,
+				807FE8761E6343D100742D65 /* PersonsDataSource.swift in Sources */,
 				800AF23F1E62769100592135 /* PersonViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -768,6 +832,7 @@
 				800AF2521E6291BF00592135 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		80E337A51E61D9A90000534E /* Build configuration list for PBXProject "PauloMendes99" */ = {
 			isa = XCConfigurationList;

@@ -3,7 +3,7 @@ import UIKit
 
 class PersonsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var fileUtils: FileUtilsProtocol?
+    var personsDataSource: PersonsDataSourceProtocol?
     var personsViewModels: [PersonViewModel] = []
     
     @IBOutlet weak var tableView: UITableView!
@@ -13,50 +13,52 @@ class PersonsViewController: UIViewController, UITableViewDelegate, UITableViewD
         loadPersonsData()
     }
     
-    func loadPersonsData() {
-        fileUtils?.readPersonsFile { (data) -> Void in
+    private func loadPersonsData() {
+        
+        personsDataSource?.getPersons(success: { (persons) in
             
-            do {
-                let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
-                
-                guard let array = json as? [Any] else {
-                    return
-                }
-                
-                guard let persons = PersonsCollection(jsonArray: array) else {
-                    return
-                }
-                
-                var personsViewModelSet: Set<PersonViewModel> = Set()
-                
-                for person in persons.entries {
-                    let personViewModel = PersonViewModel(person: person)
-                    personsViewModelSet.insert(personViewModel!)
-                }
-                
-                self.personsViewModels = Array(personsViewModelSet)
-                
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
-
-            } catch {
-                print("json error: \(error)")
+            self.transformPersonsAndReloadData(persons: persons)
+            
+        }, failure: { (err) in
+            switch err {
+                case .fileError:
+                    self.showAlertError(message: "Erro ao tentar ler o arquivo. Tente novamente")
+                case .jsonSerializationError:
+                    self.showAlertError(message: "Erro de serialização. Verifique se o arquivo está no formato JSON")
+            case .personSerializationError:
+                self.showAlertError(message: "Erro de serialização de Pessoas. Verifique se o arquivo está no formato JSON")
             }
-        }
+        })
+    }
+    
+    private func showAlertError(message: String) {
+        let alert: UIAlertController = UIAlertController(title: "Erro",
+                                                         message: message,
+                                                         preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    private func transformPersonsAndReloadData(persons: PersonsCollection) {
+        
+        let personsTransformer = PersonsTransformer(personsCollection: persons)
+        
+        self.personsViewModels = personsTransformer.getPersonsViewModel()
+        self.tableView.reloadData()
     }
     
     // MARK: Table View Delegate
     
-    func numberOfSections(in tableView: UITableView) -> Int {
+    internal func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.personsViewModels.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: PersonTableViewCell = tableView.dequeueReusableCell(withIdentifier: "person-cell",
                                                                       for: indexPath) as! PersonTableViewCell
         cell.populate(personViewModel: personsViewModels[indexPath.row])

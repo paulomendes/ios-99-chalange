@@ -8,21 +8,21 @@ class PersonViewControllerTests: XCTestCase {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
-    func testPersonViewControllerShouldCallOpenFileInViewDidLoad() {
-        class fauxFileUtils : FileUtilsProtocol {
+    func testPersonViewControllerShouldCallGetPersonsOnViewDidLoad() {
+        class FauxDataSource : PersonsDataSourceProtocol {
             var passed = false
-            func readPersonsFile(success: @escaping ((Data) -> Void)) {
+            internal func getPersons(success: @escaping (PersonsCollection) -> Void, failure: @escaping (PersonsDataSourceError) -> Void) {
                 passed = true
             }
         }
         
-        let fileUtils = fauxFileUtils()
+        let fauxDS = FauxDataSource()
         
         let vc: PersonsViewController = PersonsViewController()
-        vc.fileUtils = fileUtils
+        vc.personsDataSource = fauxDS
         UIApplication.shared.keyWindow?.rootViewController = vc
         
-        XCTAssertTrue(fileUtils.passed)
+        XCTAssertTrue(fauxDS.passed)
     }
     
 }
