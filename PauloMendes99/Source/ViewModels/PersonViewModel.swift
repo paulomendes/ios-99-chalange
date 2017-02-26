@@ -22,7 +22,7 @@ class PersonViewModel: Hashable {
     init?(person: Person) {
         self.personId = person.id
         self.fullName = person.name
-        self.birthday = PersonViewModel.formatter.string(from: person.birthday!)
+        self.birthday = PersonViewModel.formatter.string(from: person.birthday)
         self.avatarImage = person.image
     }
 }
