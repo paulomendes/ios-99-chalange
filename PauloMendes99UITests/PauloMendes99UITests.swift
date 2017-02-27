@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import PauloMendes99
 
 class PauloMendes99UITests: XCTestCase {
         
@@ -29,5 +30,4 @@ class PauloMendes99UITests: XCTestCase {
         table.swipeUp()
         table.swipeDown()
     }
-    
 }

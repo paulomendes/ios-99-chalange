@@ -12,14 +12,8 @@
 		800AF22F1E624DE800592135 /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800AF22E1E624DE800592135 /* PersonTableViewCell.swift */; };
 		800AF2351E626DB700592135 /* PersonCollectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800AF2341E626DB700592135 /* PersonCollectionTests.swift */; };
 		800AF23A1E62704400592135 /* PersonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800AF2361E626E8E00592135 /* PersonTests.swift */; };
-		800AF23B1E62705700592135 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8029B93F1E62245B0022053B /* Person.swift */; };
-		800AF23C1E62736E00592135 /* PersonsCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8029B94A1E6236E50022053B /* PersonsCollection.swift */; };
 		800AF23E1E62750D00592135 /* PersonViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800AF23D1E62750D00592135 /* PersonViewModelTests.swift */; };
-		800AF23F1E62769100592135 /* PersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8029B94C1E6246B50022053B /* PersonViewModel.swift */; };
-		800AF2401E627CC000592135 /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8029B9461E622F520022053B /* FileUtils.swift */; };
 		800AF2421E627D1300592135 /* PersonViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800AF2411E627D1300592135 /* PersonViewControllerTests.swift */; };
-		800AF2431E627DE300592135 /* PersonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8029B9411E62291C0022053B /* PersonsViewController.swift */; };
-		800AF2441E627DE600592135 /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800AF22E1E624DE800592135 /* PersonTableViewCell.swift */; };
 		800AF24C1E6291BF00592135 /* PauloMendes99UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800AF24B1E6291BF00592135 /* PauloMendes99UITests.swift */; };
 		8029B9401E62245B0022053B /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8029B93F1E62245B0022053B /* Person.swift */; };
 		8029B9421E62291C0022053B /* PersonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8029B9411E62291C0022053B /* PersonsViewController.swift */; };
@@ -31,8 +25,6 @@
 		807FE86E1E63359C00742D65 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807FE86D1E63359C00742D65 /* Container.swift */; };
 		807FE8711E633ED400742D65 /* PersonsTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807FE8701E633ED400742D65 /* PersonsTransformer.swift */; };
 		807FE8741E63405600742D65 /* PersonsTransformerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807FE8731E63405600742D65 /* PersonsTransformerTests.swift */; };
-		807FE8751E63405B00742D65 /* PersonsTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807FE8701E633ED400742D65 /* PersonsTransformer.swift */; };
-		807FE8761E6343D100742D65 /* PersonsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807FE8691E6332F300742D65 /* PersonsDataSource.swift */; };
 		807FE8791E6345B700742D65 /* DatasourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807FE8781E6345B700742D65 /* DatasourceTests.swift */; };
 		807FE87C1E63514E00742D65 /* FileUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807FE87B1E63514E00742D65 /* FileUtilsTests.swift */; };
 		807FE87D1E6367D400742D65 /* teste99.json in Resources */ = {isa = PBXBuildFile; fileRef = 8029B9481E622FEA0022053B /* teste99.json */; };
@@ -602,21 +594,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				800AF23C1E62736E00592135 /* PersonsCollection.swift in Sources */,
 				807FE87C1E63514E00742D65 /* FileUtilsTests.swift in Sources */,
 				800AF2421E627D1300592135 /* PersonViewControllerTests.swift in Sources */,
 				800AF2351E626DB700592135 /* PersonCollectionTests.swift in Sources */,
-				800AF2431E627DE300592135 /* PersonsViewController.swift in Sources */,
 				807FE8741E63405600742D65 /* PersonsTransformerTests.swift in Sources */,
-				800AF2441E627DE600592135 /* PersonTableViewCell.swift in Sources */,
 				800AF23A1E62704400592135 /* PersonTests.swift in Sources */,
-				800AF2401E627CC000592135 /* FileUtils.swift in Sources */,
-				807FE8751E63405B00742D65 /* PersonsTransformer.swift in Sources */,
 				800AF23E1E62750D00592135 /* PersonViewModelTests.swift in Sources */,
 				807FE8791E6345B700742D65 /* DatasourceTests.swift in Sources */,
-				800AF23B1E62705700592135 /* Person.swift in Sources */,
-				807FE8761E6343D100742D65 /* PersonsDataSource.swift in Sources */,
-				800AF23F1E62769100592135 /* PersonViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

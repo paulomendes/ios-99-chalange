@@ -1,5 +1,6 @@
 
 import XCTest
+@testable import PauloMendes99
 
 class PersonViewModelTests: XCTestCase {
     

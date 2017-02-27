@@ -21,10 +21,10 @@ class PersonsViewController: UIViewController, UITableViewDelegate, UITableViewD
             
         }, failure: { (err) in
             switch err {
-                case .fileError:
-                    self.showAlertError(message: "Erro ao tentar ler o arquivo. Tente novamente")
-                case .jsonSerializationError:
-                    self.showAlertError(message: "Erro de serialização. Verifique se o arquivo está no formato JSON")
+            case .fileError:
+                self.showAlertError(message: "Erro ao tentar ler o arquivo. Tente novamente")
+            case .jsonSerializationError:
+                self.showAlertError(message: "Erro de serialização. Verifique se o arquivo está no formato JSON")
             case .personSerializationError:
                 self.showAlertError(message: "Erro de serialização de Pessoas. Verifique se o arquivo está no formato JSON")
             }
